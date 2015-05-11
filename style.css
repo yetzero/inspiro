@@ -678,6 +678,7 @@ ul.menu li {
 	margin:0 auto;
 	max-width:1000px;
 	box-sizing:border-box;
+	padding: 20px 20px 50px;
 	/*background: rgba(255, 255, 0, 0.1);*/
 }
 .row:after {
@@ -689,6 +690,7 @@ ul.menu li {
 .fullwidthrow {
 	width:100%;
 	box-sizing:border-box;
+	padding: 1em;
 }
 
 .col {
@@ -720,7 +722,9 @@ ul.menu li {
 --------------------------------------------------------------*/
 
 #masthead {
-	background: #2D2C41;
+	/*background: #2D2C41;*/
+	background:rgba(0,0,0,0.3);
+	z-index: 10;
 }
 
 #logo a {
@@ -735,6 +739,7 @@ footer#colophon {
 	background: black;
 	color:rgba(255,255,255,0.5);
 	text-align: center;
+	clear: both;
 }
 
 
@@ -842,6 +847,12 @@ object {
 	display: block;
 }
 
+/* Header */
+
+.row#branding {
+	padding:10px;
+}
+
 /* Portfolio */
 .gallery {
 	
@@ -876,7 +887,7 @@ object {
 /* Single Project */
 
 .page-top {
-	height: 200px;
+	height: 300px;
 	overflow: hidden;
 	position: relative;
 }
@@ -898,12 +909,19 @@ object {
 	right: 0;
 }
 
-.page-top h1 {
+.page-top-content {
 	position: relative;
 	top:40%;
+}
+
+.page-top h1 {
 	color: white;
 	text-align: center;
 	font-weight: 800;
+}
+.hero-subtitle {
+	color: white;
+	text-align: center;
 }
 
 .project-holder {

@@ -1,12 +1,12 @@
-<?php error_reporting(E_ALL); 
-ini_set( 'display_errors','1');
-get_header(); ?>
+<?php get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 		<div class="page-top">
 			<?php echo the_post_thumbnail( 'full'); ?>
 			<div class="darkener"></div>
-			<h1><?php echo the_title(); ?></h1>
+			<div class="page-top-content">
+				<h1><?php echo the_title(); ?></h1>
+			</div>
 		</div>
 		<div class="project-holder">
 			<div class="gallery-column">
