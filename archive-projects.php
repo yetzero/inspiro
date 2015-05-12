@@ -7,9 +7,10 @@
 			</header><!-- .page-header -->
 			<div class="gallery">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<a class="thumbnail" href="<?php echo the_permalink(); ?>"><?php
+				<a class="thumbnail" href="<?php echo the_permalink(); ?>">
+					<div class="img-container"><?php
 					echo get_the_post_thumbnail($post->ID,'full');
-				?>
+				?></div>
 				<h2><?php echo the_title(); ?></h2>
 				<?php $types = wp_get_post_terms($post->ID,'types'); ?>
 				<ul class="types"><?php foreach($types as $type){
