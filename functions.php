@@ -136,6 +136,33 @@ require get_template_directory() . '/inc/jetpack.php';
 * Custom shortcodes
 */
 
+function section_shortcode( $atts , $content = null ) {
+	extract(shortcode_atts(array(
+		"class" => '',
+		"id" => ''
+		),$atts));
+		
+		$returnstring = '<section';
+		
+		if(!empty($atts['class'])){
+			$returnstring .= ' class="'.$atts['class'].'"';
+		}
+		
+		
+		
+		if(!empty($atts['id'])){
+			$returnstring .= ' id="'.$atts['id'].'"';
+		}
+		
+		
+		$returnstring .= '>'.do_shortcode($content).'</section>';
+			
+	
+		return $returnstring;
+}
+
+add_shortcode( 'section', 'section_shortcode' );
+
 function row_shortcode( $atts , $content = null ) {
 	extract(shortcode_atts(array(
 		"width" => 'normal'),$atts));
