@@ -151,11 +151,12 @@ input,
 select,
 textarea {
 	color: #606060;
-	font-family: 'open-sans',sans-serif;
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-family: 'proxima-nova',sans-serif;
+	font-size: 18px;
+	font-size: 1.8rem;
 	line-height: 1.5;
 	-webkit-font-smoothing:antialiased;
+	font-weight: 400;
 }
 
 h1,
@@ -676,7 +677,7 @@ ul.menu li {
 .row {
 	width:90%;
 	margin:0 auto;
-	max-width:1000px;
+	max-width:160rem; /* Wider than main content column */
 	box-sizing:border-box;
 	padding: 20px 20px 50px;
 	/*background: rgba(255, 255, 0, 0.1);*/
@@ -711,6 +712,11 @@ ul.menu li {
 	float:left;
 	/*background: rgba(255, 0, 0, 0.1);*/
 	}
+	
+.oneofthree h2, .oneofthree h3, .oneofthree h4, .oneofthree h5, .oneofthree h6, .oneofthree p {
+	text-align: center;
+}
+
 .col.twoofthree {
 	width: 66.666666666666%;
 	float: left;
@@ -724,6 +730,7 @@ ul.menu li {
 #masthead {
 	background: #e30881;
 	z-index: 10;
+	padding: 0;
 }
 
 #logo a {
@@ -926,7 +933,8 @@ object {
 .page-top h1 {
 	color: white;
 	text-align: center;
-	font-weight: 800;
+	font-weight: 100;
+	text-shadow: 1px 1px 60px rgba(0, 0, 0, 0.33);
 }
 .hero-subtitle {
 	color: white;
@@ -962,4 +970,83 @@ object {
 	font-size: 90%;
 	list-style: none;
 	margin-left: 0;
+}
+
+/* Section styles */
+
+section { /* Default <section> styles */
+	clear: both;
+	padding: 3rem 3rem 6rem;
+	box-sizing: border-box;
+}
+
+section p, section h1, section h2, section h3, section h4, section h5, section h6, section ul, section ol {  /* Set default section elements width */
+	width: 90%;
+	max-width: 80rem;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+section ul, section ol {
+	text-align: left;
+}
+
+.hero-text {
+	font-size: 150%;
+}
+
+.dark {
+	background: rgb(40,40,40);
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p, .dark ul, .dark ol {
+	color: white;
+	text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.8);
+	font-weight: 400;
+}
+
+.heading {
+	background: #e30881;
+	padding:2em 5em;
+}
+
+.heading h2 {
+	text-align: center;
+	font-size: 200%;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: white;
+	text-shadow: 1px 1px 100px rgba(0, 0, 0, 0.5)
+}
+
+
+section.hero-image {
+	width: 100%;
+	height: 0;
+	padding-bottom: 30%;
+}
+
+/* Specific Sections */
+
+section#hero-ipad {
+	background:url('/media/ipad-half.png') no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+section#promo-responsive {
+	background: url('/media/responsive_2_1.jpg') no-repeat;
+	background-size: cover;
+	background-position: 50% 30%;
+}
+
+/* Avoid pesky empty paragraphs from ruining the layout */
+
+p:empty {
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: red;
+	display: none;
 }
