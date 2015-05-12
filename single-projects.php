@@ -38,7 +38,7 @@
 		<p style="clear: both;">&nbsp;</p>
 		</div>
 
-			<?php inspiro_post_nav(); ?>
+			<?php // inspiro_post_nav(); ?>
 
 			
 

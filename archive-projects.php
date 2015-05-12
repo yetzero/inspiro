@@ -9,7 +9,13 @@
 			<?php while ( have_posts() ) : the_post(); ?>
 				<a class="thumbnail" href="<?php echo the_permalink(); ?>">
 					<div class="img-container"><?php
-					echo get_the_post_thumbnail($post->ID,'full');
+						$img = get_the_post_thumbnail($post->ID,'full');
+						if(!empty($img)){
+							echo $img;
+						}
+						else {
+							echo "<p>Sin imagen</p>";
+						}
 				?></div>
 				<h2><?php echo the_title(); ?></h2>
 				<?php $types = wp_get_post_terms($post->ID,'types'); ?>
