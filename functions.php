@@ -68,8 +68,8 @@ function inspiro_setup() {
 	) ) );
 	
 	// Remove p tag in content editors.
-	remove_filter( 'the_content', 'wpautop' );
-	remove_filter( 'the_excerpt', 'wpautop' );
+	// remove_filter( 'the_content', 'wpautop' );
+	// remove_filter( 'the_excerpt', 'wpautop' );
 }
 endif; // inspiro_setup
 add_action( 'after_setup_theme', 'inspiro_setup' );
