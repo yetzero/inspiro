@@ -441,17 +441,17 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #22D5A1;
 }
 
 a:visited {
-	color: purple;
+	color: #22D5A1;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #22D5A1;
 }
 
 /*--------------------------------------------------------------
@@ -462,6 +462,7 @@ ul.menu {
 	list-style: none;
 	padding-left: 0;
 	text-align: center;
+	padding-top:12px;
 }
 
 ul.menu li {
@@ -733,6 +734,11 @@ ul.menu li {
 	padding: 0;
 }
 
+#header-logo {
+	width: 180px;
+	height: auto;
+}
+
 #logo a {
 	color:white;
 	text-decoration:none;
@@ -980,7 +986,7 @@ section { /* Default <section> styles */
 	box-sizing: border-box;
 }
 
-section p, section h1, section h2, section h3, section h4, section h5, section h6, section ul, section ol {  /* Set default section elements width */
+section p, section h1, section h2, section h3, section h4, section h5, section h6, section ul, section ol, section form {  /* Set default section elements width */
 	width: 90%;
 	max-width: 80rem;
 	margin-left: auto;
@@ -1036,9 +1042,21 @@ section#hero-ipad {
 }
 
 section#promo-responsive {
-	background: url('/media/responsive_2_1.jpg') no-repeat;
+	background: rgba(0,0,0,0.5);
 	background-size: cover;
 	background-position: 50% 30%;
+	position: relative;
+}
+
+section#promo-responsive::after {
+	content: "";
+	background: black url('/media/responsive_2_1.jpg') no-repeat;
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
 }
 
 /* Avoid pesky empty paragraphs from ruining the layout */

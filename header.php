@@ -30,7 +30,9 @@
 		<div class="content">
 			<div class="row" id="branding">
 				<div class="col oneofthree" id="logo">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="Ir al inicio">INSPIRO</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="Ir al inicio">
+						<img id="header-logo" src="<?php echo get_template_directory_uri(); ?>/header-logo.svg" alt="Inspiro" />
+					</a>
 				</div>
 
 				<nav id="site-navigation" class="col twoofthree" role="navigation">
