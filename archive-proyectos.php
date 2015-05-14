@@ -2,9 +2,13 @@
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">Projects</h1>
-			</header><!-- .page-header -->
+			<div class="page-top">
+				<img src="/media/ocean.jpg" alt="">
+				<div class="page-top-content">
+					<h1>Proyectos</h1>
+					<p class="hero-subtitle">Proyectos que hemos realizado para nuestros clientes</p>
+				</div>
+			</div>
 			<div class="gallery">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<a class="thumbnail" href="<?php echo the_permalink(); ?>">

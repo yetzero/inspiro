@@ -180,8 +180,8 @@ h1 {
 	}
 
 h2 {
-	margin-top:1.5em;
-	font-size:200%;
+	font-size:180%;
+	margin-bottom: 1em;
 	color:black;
 	}
 
@@ -342,27 +342,24 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: rgba(0, 0, 0, .8);
+	border: 2px solid;
+	border-color: #e30881;
+	border-radius: 0.3em;
+	background: transparent;
+	color: #e30881;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-	font-size: 12px;
-	font-size: 1.2rem;
+	font-size: 100%;
 	line-height: 1;
-	padding: .6em 1em .4em;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	padding: 0.5em 2em;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+	background: #e30881;
+	color: white;
 }
 
 button:focus,
@@ -373,8 +370,8 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
-	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	background: #e30881;
+	color: white;
 }
 
 input[type="checkbox"],
@@ -425,6 +422,8 @@ input[type="url"],
 input[type="password"],
 input[type="search"] {
 	padding: 3px;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 textarea {
@@ -982,7 +981,7 @@ object {
 
 section { /* Default <section> styles */
 	clear: both;
-	padding: 3rem 3rem 6rem;
+	padding: 6rem 3rem 6rem;
 	box-sizing: border-box;
 }
 
@@ -999,16 +998,29 @@ section ul, section ol {
 }
 
 .hero-text {
-	font-size: 150%;
+	font-size: 130%;
+}
+
+.hero-text p {
+	margin-bottom: 0;
 }
 
 .dark {
 	background: rgb(40,40,40);
 }
 
+.fullbleed {
+	padding: 0;
+	margin-top:-1.5em;
+}
+
+.align-left h1, .align-left h2, .align-left h3, .align-left h4, .align-left h5, .align-left h6, .align-left p {
+	text-align: left;
+}
+
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p, .dark ul, .dark ol {
 	color: white;
-	text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.8);
+	text-shadow: 1px 1px 40px rgba(0, 0, 0, 0.5);
 	font-weight: 400;
 }
 
@@ -1059,6 +1071,33 @@ section#promo-responsive::after {
 	z-index: -1;
 }
 
+section#hero-branding {
+	background: rgba(0,0,0,0.2);
+	position: relative;
+}
+
+section#hero-branding::after {
+	content: "";
+	background: url('/media/branding.jpg') no-repeat;
+	background-size: cover;
+	background-position: 50% 80%;
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+.branding-color {
+	background: #00d5a7;
+	color: white;
+}
+
+section#promo-mantencion {
+	background: #065C99;
+}
+
 /* Avoid pesky empty paragraphs from ruining the layout */
 
 p:empty {
@@ -1073,7 +1112,7 @@ p:empty {
 
 @media screen and (max-width:960px) {
 	section {
-		padding: 1em;
+		padding: 2em 1em;
 	}
 	
 	.hero-text {
@@ -1088,6 +1127,9 @@ p:empty {
 	
 	.heading {
 		padding:1em;
+	}
+	.thumbnail {
+		width: 50%;
 	}
 }
 
@@ -1113,6 +1155,11 @@ p:empty {
 		display: block;
 		margin: 0 auto;
 	}
+	
+	.col.oneoftwo {
+		width: 100%;
+		float: none;
+	}
 
 	.col.oneofthree {
 		width: 100%;
@@ -1123,4 +1170,12 @@ p:empty {
 		width: 100%;
 		float: none;
 	}
+}
+
+@media screen and (max-width:660px) {
+	.thumbnail {
+		width: 100%;
+	}
+	
+
 }
