@@ -7,39 +7,34 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
 		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'inspiro' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<?php /* Start the Loop */ ?>
+			<section class="short-bar" id="hero-search-results">
+				<p>Resultados de búsqueda: <i><?php echo get_search_query(); ?></i></p>
+			</section>
+			<section id="search-results">
+				<ul class="posts-list">
 			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'content', 'search' );
-				?>
-
+					<li>
+						<a href="<?php echo the_permalink(); ?>" title="<?php echo the_title(); ?>"><?php echo get_the_post_thumbnail( $post->ID, "thumbnail"); ?></a>
+						<div class="details">
+							<a href="<?php echo the_permalink(); ?>" title="<?php echo the_title(); ?>"><h2><?php echo the_title(); ?></h2></a>
+							<p><?php $post_type = get_post_type_object( get_post_type($post->ID)); echo $post_type->labels->singular_name; ?></p>
+						</div>
+					</li>
 			<?php endwhile; ?>
+				</ul>
+			</section>
 
 			<?php inspiro_paging_nav(); ?>
 
 		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
+			<section class="short-bar" id="search-no-results">
+				<h1>Nada encontrado</h1>
+				<p>Lo sentimos, no encontramos nada de lo que buscaste.</p>
+				<p>Prueba buscar con otra palabra clave.</p>
+				<?php get_search_form(); ?>
+			</section>	
 		<?php endif; ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

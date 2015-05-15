@@ -197,3 +197,11 @@ function col_shortcode( $atts , $content = null ) {
 	return '<div class="col ' . $size . '">' . do_shortcode($content) . '</div>';
 }
 add_shortcode( 'col', 'col_shortcode' );
+
+function icon_shortcode($atts) {
+	extract(shortcode_atts(array(
+		"url" => ''), $atts));
+	
+	return '<img class="icon" src="'.$atts[url].'" alt="" />';	
+}
+add_shortcode( 'icon', 'icon_shortcode');

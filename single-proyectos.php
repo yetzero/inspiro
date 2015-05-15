@@ -1,13 +1,12 @@
 <?php get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
-		<div class="page-top">
-			<?php echo the_post_thumbnail( 'full'); ?>
-			<div class="darkener"></div>
-			<div class="page-top-content">
-				<h1><?php echo the_title(); ?></h1>
-			</div>
-		</div>
+		<section class="breadcrumb">
+			<p>Estás en: <a href="/proyectos/" title="Todos los proyectos">Proyectos</a> > <?php echo the_title(); ?></p>
+		</section>
+		<section class="short-bar">
+			<h1><?php echo the_title(); ?></h1>
+		</section>
 		<div class="project-holder">
 			<div class="gallery-column">
 			<?php
@@ -21,14 +20,13 @@
 			?>
 			</div>
 			<div class="project-details">
-				<h2>Descripción del proyecto</h2>
 				<?php
 					echo get_post_meta($post->ID,'wpcf-description',true);
 				?>
 				<ul class="project-details-list">
 					<li><b>Cliente</b>:
 					<?php 
-						$cliente_id = get_post_meta($post->ID,'_wpcf_belongs_clients_id',true);
+						$cliente_id = get_post_meta($post->ID,'_wpcf_belongs_clientes_id',true);
 						echo get_the_title($cliente_id);
 					?>
 					<li><b>Fecha</b>: <?php echo get_post_meta($post->ID,'wpcf-date',true); ?></li>

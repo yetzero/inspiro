@@ -2,13 +2,10 @@
 
 		<?php if ( have_posts() ) : ?>
 
-			<div class="page-top">
-				<img src="/media/ocean.jpg" alt="">
-				<div class="page-top-content">
-					<h1>Proyectos</h1>
-					<p class="hero-subtitle">Proyectos que hemos realizado para nuestros clientes</p>
-				</div>
-			</div>
+		<section id="hero-proyectos" class="hero-text dark">
+			<h1>Proyectos</h1>
+			<p>Algunos proyectos en los que hemos trabajado con nuestros clientes</p>
+		</section>
 			<div class="gallery">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<a class="thumbnail" href="<?php echo the_permalink(); ?>">
@@ -22,11 +19,11 @@
 						}
 				?></div>
 				<h2><?php echo the_title(); ?></h2>
-				<?php $types = wp_get_post_terms($post->ID,'types'); ?>
-				<ul class="types"><?php foreach($types as $type){
-					echo '<li>'.$type->name.'</li>';
-				} ?>
-				</ul></a>
+				<?php // $types = wp_get_post_terms($post->ID,'types'); ?>
+				<!-- <ul class="types">--><?php //foreach($types as $type){
+					 // echo '<li>'.$type->name.'</li>';
+				// } ?>
+				<!--</ul>--></a>
 			<?php endwhile; ?>
 			<p style="clear: both;">&nbsp;</p>
 			</div>

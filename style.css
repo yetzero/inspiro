@@ -168,7 +168,7 @@ h6 {
 	clear: both;
 	font-family:'proxima-nova',sans;
 	text-transform:uppercase;
-	font-weight:100;
+	font-weight:400;
 	margin-bottom:1em;
 	line-height:1;
 }
@@ -177,18 +177,19 @@ h1 {
 	margin-bottom:1em;
 	font-size:250%;
 	color:black;
+	font-weight: 600;
 	}
 
 h2 {
 	font-size:180%;
 	margin-bottom: 1em;
-	color:black;
+	color:#4b4b4b;
 	}
 
 h3 {
 	margin-top:1.5em;
 	font-size:150%;
-	color:black;
+	color:#212121;
 	}
 
 p {
@@ -352,6 +353,7 @@ input[type="submit"] {
 	font-size: 100%;
 	line-height: 1;
 	padding: 0.5em 2em;
+	margin-top:1em;
 }
 
 button:hover,
@@ -440,17 +442,17 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: #22D5A1;
+	color: #00AD7B;
 }
 
 a:visited {
-	color: #22D5A1;
+	color: #00AD7B;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #22D5A1;
+	color: #00AD7B;
 }
 
 /*--------------------------------------------------------------
@@ -723,6 +725,11 @@ ul.menu li {
 	/*background: rgba(0, 0, 255, 0.1);*/
 }
 
+.icon {
+	width: 180px;
+	height: 180px;
+}
+
 /*--------------------------------------------------------------
 10.5 Header
 --------------------------------------------------------------*/
@@ -890,6 +897,7 @@ object {
 .thumbnail h2 {
 	font-size:100%;
 	text-align: center;
+	padding:0.5em 1em;
 }
 
 .types {
@@ -993,20 +1001,48 @@ section p, section h1, section h2, section h3, section h4, section h5, section h
 	text-align: center;
 }
 
+section.short-bar {
+	padding: 1em;
+}
+
+section.short-bar h1 {
+	margin-bottom: 0;
+}
+
 section ul, section ol {
 	text-align: left;
 }
 
 .hero-text {
 	font-size: 130%;
+	padding-top: 3em;
+	padding-bottom: 3em;
 }
 
 .hero-text p {
 	margin-bottom: 0;
 }
 
+.wide p {
+	max-width: 90%;
+}
+
+.breadcrumb {
+	padding:1em 0;
+	font-size: 80%;
+}
+.breadcrumb p {
+	max-width: 90%;
+	text-align: left;
+	margin:0 auto;
+}
+
 .dark {
 	background: rgb(40,40,40);
+}
+
+.dark a, .dark a:visited, .dark a:active {
+	color:#00FFB5;
 }
 
 .fullbleed {
@@ -1020,7 +1056,7 @@ section ul, section ol {
 
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p, .dark ul, .dark ol {
 	color: white;
-	text-shadow: 1px 1px 40px rgba(0, 0, 0, 0.5);
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 	font-weight: 400;
 }
 
@@ -1045,48 +1081,54 @@ section.hero-image {
 	padding-bottom: 30%;
 }
 
-/* Specific Sections */
 
+/* !Photo Background Section */
+
+section.photobg {
+	background:rgba(0,0,0,0.2);
+	position: relative;
+}
+
+section.photobg::after {
+	content: "";
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+
+
+/* !Specific Sections */
+
+/* iPad Showcase Section */
 section#hero-ipad {
 	background:url('/media/ipad-half.png') no-repeat;
 	background-size: cover;
 	background-position: 50% 50%;
 }
 
-section#promo-responsive {
-	background: rgba(0,0,0,0.5);
-	position: relative;
-}
+/* Responsive Promo Section */
 
 section#promo-responsive::after {
-	content: "";
-	background: black url('/media/responsive_2_1.jpg') no-repeat;
-	background-size: cover;
+	background-image:url('/media/responsive_2_1.jpg');
 	background-position: 50% 30%;
-	position: absolute;
-	top:0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
 }
 
-section#hero-branding {
-	background: rgba(0,0,0,0.2);
-	position: relative;
+.responsive-color {
+	background:#fc9800;
+	color: white;
 }
 
+/* Brading Section */
 section#hero-branding::after {
-	content: "";
-	background: url('/media/branding.jpg') no-repeat;
-	background-size: cover;
+	background-image: url('/media/branding.jpg');
 	background-position: 50% 80%;
-	position: absolute;
-	top:0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
 }
 
 .branding-color {
@@ -1094,8 +1136,67 @@ section#hero-branding::after {
 	color: white;
 }
 
-section#promo-mantencion {
-	background: #065C99;
+/* Web Design Section */
+section#hero-diseno-web::after {
+	background-image:url('/media/hero-diseno-web.jpg');
+	background-position: 50% 60%;
+}
+
+.web-design-color {
+	background: #1BBAFF;
+	color: white;
+}
+
+/* Responsive Design Section */
+section#hero-responsive::after {
+	background-image: url('/media/responsive_2_1.jpg');
+}
+
+/* Maintenance Plan Section */
+
+section#hero-maintenance::after {
+	background-image: url('/media/bgkaizen.jpg');
+}
+
+.maintenance-color {
+	background: #72BB05;
+	color: white;
+}
+
+.dark.maintenance-color a {
+	color: white;
+}
+
+/* Search Results */
+
+.posts-list {
+	list-style: none;
+}
+
+.posts-list li {
+	display: block;
+	clear: both;
+	text-align: left;
+	padding: 1em 0;
+}
+
+.posts-list li img {
+	display: inline-block;
+	width: 75px;
+	height: 75px;
+	margin-right: 1em;
+}
+
+.posts-list .details {
+	display: inline-block;
+	clear: none;
+}
+
+.details p, .details h2 {
+	width: auto;
+	text-align: left;
+	clear: none;
+	margin-bottom: 0;
 }
 
 /* Avoid pesky empty paragraphs from ruining the layout */
@@ -1129,6 +1230,14 @@ p:empty {
 		padding:1em;
 	}
 	.thumbnail {
+		width: 50%;
+	}
+	
+	.gallery-column {
+		width: 50%
+		}
+		
+	.project-details {
 		width: 50%;
 	}
 }
@@ -1167,6 +1276,16 @@ p:empty {
 	}
 	
 	.col.twoofthree {
+		width: 100%;
+		float: none;
+	}
+	
+	.gallery-column {
+		width: 100%;
+		float: none;
+	}
+	
+	.project-details {
 		width: 100%;
 		float: none;
 	}
