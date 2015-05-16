@@ -2,7 +2,7 @@
 
 		<?php if ( have_posts() ) : ?>
 
-		<section id="hero-proyectos" class="hero-text dark">
+		<section id="hero-proyectos" class="hero-text">
 			<h1>Proyectos</h1>
 			<p>Algunos proyectos en los que hemos trabajado con nuestros clientes</p>
 		</section>

@@ -463,7 +463,7 @@ ul.menu {
 	list-style: none;
 	padding-left: 0;
 	text-align: center;
-	padding-top:12px;
+	padding-top:0px;
 }
 
 ul.menu li {
@@ -737,11 +737,11 @@ ul.menu li {
 #masthead {
 	background: #e30881;
 	z-index: 10;
-	padding: 0;
+	padding: 10px 0 0 0;
 }
 
 #header-logo {
-	width: 180px;
+	width: 110px;
 	height: auto;
 }
 
@@ -758,6 +758,7 @@ footer#colophon {
 	color:rgba(255,255,255,0.5);
 	text-align: center;
 	clear: both;
+	padding: 1em;
 }
 
 
@@ -868,7 +869,19 @@ object {
 /* Header */
 
 .row#branding {
-	padding:10px;
+}
+
+#main-logo {
+	float: left;
+}
+
+#site-navigation {
+	float: right;
+}
+
+ul#menu-navegacion-principal {
+	width: 100%;
+	max-width: none;
 }
 
 /* Portfolio */
@@ -1289,6 +1302,11 @@ p:empty {
 		width: 100%;
 		float: none;
 	}
+	
+	.icon {
+		width: 150px;
+		height: 150px;
+	}
 }
 
 @media screen and (max-width:660px) {
@@ -1296,5 +1314,60 @@ p:empty {
 		width: 100%;
 	}
 	
+	.col {
+		padding: 0;
+	}
+	
+	h3 {
+		margin-top:1em;
+		margin-bottom: 0.5em;
+	}
+}
 
+@media screen and (max-width:560px){
+	section {
+		padding:1em;
+	}
+	
+	#main-logo {
+		display: block;
+		width: 110px;
+		float: none;
+		margin: 0 auto;
+	}
+	#site-navigation {
+		display: block;
+		float: none;
+		margin: 0 auto;
+	}
+	
+	.icon {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@media screen and (max-width:410px){
+	section.hero-text {
+		padding-top:1.5em;
+		padding-bottom: 1.5em;
+		font-size:100%;
+	}
+	
+	h1 {
+		font-size:200%;
+	}
+	
+	h2 {
+		font-size:130%;
+	}
+	
+	ul.menu li {
+		display: block;
+	}
+	
+	.icon {
+		width: 80px;
+		height: 80px;
+	}
 }

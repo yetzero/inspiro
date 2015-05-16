@@ -28,14 +28,11 @@
 <section id="masthead">
 	<header class="site-header" role="banner">
 		<div class="content">
-			<div class="row" id="branding">
-				<div class="col oneofthree" id="logo">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="Ir al inicio">
-						<img id="header-logo" src="<?php echo get_template_directory_uri(); ?>/header-logo.svg" alt="Inspiro" />
-					</a>
-				</div>
+				<a id="main-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="Ir al inicio">
+					<img id="header-logo" src="<?php echo get_template_directory_uri(); ?>/header-logo.png" alt="Inspiro" />
+				</a>
 
-				<nav id="site-navigation" class="col twoofthree" role="navigation">
+				<nav id="site-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				</nav><!-- #site-navigation -->
 			</div>
