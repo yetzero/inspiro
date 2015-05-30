@@ -1194,6 +1194,11 @@ section.photobg.maintenance-color {
 	color: white;
 }
 
+.maintenance-color.small-icon {
+	background: transparent;
+	color: #72BB05;
+}
+
 /* Search Results */
 
 .posts-list {
