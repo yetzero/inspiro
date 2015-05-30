@@ -204,4 +204,27 @@ function icon_shortcode($atts) {
 	
 	return '<img class="icon" src="'.$atts[url].'" alt="" />';	
 }
+
 add_shortcode( 'icon', 'icon_shortcode');
+
+
+function bigicon_shortcode($atts) {
+	extract(shortcode_atts(array(
+		"class" => ''), $atts));
+		
+	return '<p class="big-icon '.$atts['class'].'">&nbsp;</p>';
+
+}
+
+add_shortcode( 'bigicon', 'bigicon_shortcode');
+
+
+function smallicon_shortcode($atts) {
+	extract(shortcode_atts(array(
+		"class" => ''), $atts));
+		
+	return '<p class="small-icon '.$atts['class'].'">&nbsp;</p>';
+
+}
+
+add_shortcode( 'smallicon', 'smallicon_shortcode');

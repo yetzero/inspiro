@@ -1297,12 +1297,21 @@ p:empty {
 
 /* !Icons styling */
 
-.hero-text p.big-icon {
+p.big-icon {
 	text-align: center;
 	font-size: 600%;
 	margin-bottom:-0.3em;
+	position: relative;
+	left: .1em;
 }
 
+p.small-icon {
+	text-align: center;
+	font-size: 300%;
+	margin-bottom:-0.8em;
+	position: relative;
+	left: .1em;
+}
 
 /* !Responsive styles */
 
