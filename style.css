@@ -1328,6 +1328,9 @@ p:empty {
 .icon-visual-design:before {
   content: "v";
 }
+.icon-responsive:before {
+  content: "r";
+}
 
 
 /* !Icons styling */
