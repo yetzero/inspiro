@@ -4,7 +4,7 @@ Theme URI: http://www.inspiro.cl
 Author: Luis Santander
 Author URI: http://www.luissantanderart.com
 Description: Description
-Version: 1.0-wpcom
+Version: 1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: inspiro
@@ -163,7 +163,7 @@ h2 {
 	}
 
 h3 {
-	margin-top:1.5em;
+	/* margin-top:1.5em; */
 	font-size:150%;
 	color:#212121;
 	}
@@ -1105,6 +1105,17 @@ section.photobg::after {
 
 /* !Specific Sections */
 
+/* Portada */
+
+.inspiro-background {
+	background:#e30881;
+	color:white;
+}
+
+.inspiro-color {
+	color: #e30881;
+}
+
 /* iPad Showcase Section */
 section#hero-ipad {
 	background:url('/media/ipad-half.png') no-repeat;
@@ -1154,6 +1165,11 @@ section.photobg.web-design-color {
 	background: rgba(64, 0, 35, 0.5);
 }
 
+.web-design-color.small-icon {
+	background: transparent;
+	color: #E30881;
+}
+
 /* !Multimedia Section */
 
 section#hero-multimedia::after {
@@ -1168,6 +1184,11 @@ section#hero-multimedia::after {
 
  section.photobg.multimedia-color {
 		background-color: rgba(166, 89, 0, 0.5);
+}
+
+.multimedia-color.small-icon {
+	background: transparent;
+	color:#FF8800;
 }
 
 /* Responsive Design Section */
@@ -1298,6 +1319,15 @@ p:empty {
 .icon-web-design:before {
   content: "w";
 }
+.icon-content:before {
+  content: "c";
+}
+.icon-user-experience:before {
+  content: "x";
+}
+.icon-visual-design:before {
+  content: "v";
+}
 
 
 /* !Icons styling */
@@ -1313,7 +1343,7 @@ p.big-icon {
 p.small-icon {
 	text-align: center;
 	font-size: 300%;
-	margin-bottom:-0.8em;
+	margin-bottom:-0.25em;
 	position: relative;
 	left: .1em;
 }
