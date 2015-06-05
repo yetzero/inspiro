@@ -228,3 +228,15 @@ function smallicon_shortcode($atts) {
 }
 
 add_shortcode( 'smallicon', 'smallicon_shortcode');
+
+/* Image sizes */
+add_action( 'after_setup_theme', 'image_sizes' );
+function image_sizes() {
+  add_image_size( '50x50', 50, 50 );
+  add_image_size( '100x100', 100, 100 );
+  add_image_size( '200x200', 200, 200 );
+  add_image_size( '400x400', 400, 400 );
+  add_image_size( '800x800', 800, 800 );
+  add_image_size( '1200x1200', 1200, 1200 );
+  add_image_size( '1600x1600', 1600, 1600 );
+}
