@@ -1331,6 +1331,24 @@ p:empty {
 .icon-responsive:before {
   content: "r";
 }
+.icon-evaluation:before {
+  content: "E";
+}
+.icon-all-services:before {
+  content: "a";
+}
+.icon-personalized-plan:before {
+  content: "p";
+}
+.icon-hosting:before {
+  content: "h";
+}
+.icon-content-creation:before {
+  content: "d";
+}
+.icon-social-media:before {
+  content: "e";
+}
 
 
 /* !Icons styling */
