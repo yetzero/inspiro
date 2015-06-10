@@ -16,7 +16,6 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <!-- Typekit -->
 	<script src="//use.typekit.net/guc2erq.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>

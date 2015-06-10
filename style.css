@@ -726,6 +726,8 @@ ul.menu li {
 	text-decoration:none;
 }
 
+
+
 /*--------------------------------------------------------------
 10.6 Footer
 --------------------------------------------------------------*/
@@ -737,6 +739,14 @@ footer#colophon {
 	padding: 1em;
 }
 
+footer#colophon a {
+	font-size: 200%;
+	text-decoration: none;
+}
+
+footer#colophon a:hover {
+	color: white;
+}
 
 /*--------------------------------------------------------------
 11.0 Infinite scroll
@@ -842,7 +852,7 @@ object {
 	display: block;
 }
 
-/* Header */
+/* !Header */
 
 .row#branding {
 }
@@ -858,6 +868,20 @@ object {
 ul#menu-navegacion-principal {
 	width: 100%;
 	max-width: none;
+}
+
+ul.menu li.inspiro-redes-facebook, ul.menu li.inspiro-redes-twitter {
+	padding: 0 0.1em;
+	position: relative;
+	top:0.3em;
+	line-height: 0.8;
+}
+
+.menu .inspiro-redes-facebook a, .menu .inspiro-redes-twitter a {
+	font-family: 'inspiro-icons';
+	color: white;
+	text-transform: none;
+	font-size: 130%;
 }
 
 /* !Portfolio */
@@ -1349,6 +1373,22 @@ p:empty {
 .icon-social-media:before {
   content: "e";
 }
+.icon-bug-fixing:before {
+  content: "f";
+}
+.icon-technical-support:before {
+  content: "g";
+}
+.icon-software-updates:before {
+  content: "j";
+}
+.icon-facebook-square:before {
+  content: "k";
+}
+.icon-twitter-square:before {
+  content: "l";
+}
+
 
 
 /* !Icons styling */
@@ -1511,6 +1551,11 @@ p.small-icon {
 	
 	ul.menu li {
 		display: block;
+	}
+	
+	ul.menu li.inspiro-redes-facebook, ul.menu li.inspiro-redes-twitter {
+		padding: 0.2em;
+		margin-bottom: 0.2em;
 	}
 	
 	.icon {

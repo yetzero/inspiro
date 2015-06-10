@@ -4,7 +4,7 @@
 
 	<footer id="colophon">
 		<p>&copy; 2015 - Inspiro</p>
-					<!-- <i class="fa fa-facebook"></i> <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> <i class="fa fa-pinterest"></i>-->
+		<p><a href="https://www.facebook.com/Inspiro.cl" class="icon-facebook-square" title="Inspiro en Facebook"></a> <a href="https://twitter.com/InspiroDesignCL" class="icon-twitter-square" title="Inspiro en Twitter"></a></p>
 	</footer>
 	
 <?php wp_footer(); ?>
