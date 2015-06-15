@@ -27,6 +27,10 @@
 <section id="masthead">
 	<header class="site-header" role="banner">
 		<div class="content">
+				<a id="menu-toggle" class="icon-menu" href="#"></a>
+				<nav id="mobile-navigation">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary') ); ?>
+				</nav>
 				<a id="main-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="Ir al inicio">
 					<img id="header-logo" src="<?php echo get_template_directory_uri(); ?>/header-logo.png" alt="Inspiro" />
 				</a>

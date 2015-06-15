@@ -435,6 +435,7 @@ a:active {
 5.2 Menus
 --------------------------------------------------------------*/
 ul.menu {
+	width: 100%;
 	margin: 0;
 	list-style: none;
 	padding-left: 0;
@@ -1286,6 +1287,27 @@ p:empty {
 	display: none;
 }
 
+/* !Menu toggle */
+
+#menu-toggle {
+	display:none;
+	}
+	
+#mobile-navigation {
+	display: none;
+	position: absolute;
+	top:10px;
+	left: 5px;
+	z-index: 1;
+	background: #e30881;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+#mobile-navigation li {
+	display: block;
+	padding: 0.3em 1em;
+	font-size: 100%;
+}
+
 /* !Font Icons */
 
 @charset "UTF-8";
@@ -1388,7 +1410,9 @@ p:empty {
 .icon-twitter-square:before {
   content: "l";
 }
-
+.icon-menu:before {
+  content: "n";
+}
 
 
 /* !Icons styling */
@@ -1511,7 +1535,19 @@ p.small-icon {
 	}
 }
 
-@media screen and (max-width:560px){
+@media screen and (max-width:580px){
+	#menu-toggle {
+		display: block;
+		float: left;
+		color: white;
+		text-decoration: none;
+		font-size: 150%;
+		padding-left: 2px;
+	}
+	#mobile-navigation.active {
+		display: block;
+	}
+	
 	section {
 		padding:1em;
 	}
@@ -1523,11 +1559,10 @@ p.small-icon {
 		margin: 0 auto;
 	}
 	#site-navigation {
-		display: block;
+		display: none;
 		float: none;
 		margin: 0 auto;
 	}
-	
 	.icon {
 		width: 100px;
 		height: 100px;

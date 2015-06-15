@@ -10,4 +10,13 @@
 <?php wp_footer(); ?>
 
 </body>
+<script>
+	var buttonToggle = document.getElementById("menu-toggle");
+	var menu = document.getElementById("mobile-navigation");
+	
+	buttonToggle.addEventListener("click", function(event){
+		event.preventDefault();
+		menu.classList.add("active");
+	})
+</script>
 </html>
