@@ -13,10 +13,23 @@
 <script>
 	var buttonToggle = document.getElementById("menu-toggle");
 	var menu = document.getElementById("mobile-navigation");
+	var close = document.getElementById("menu-close");
+	var menuActive = false;
 	
 	buttonToggle.addEventListener("click", function(event){
 		event.preventDefault();
-		menu.classList.add("active");
+		if(menuActive == false){
+			menu.classList.add("active");
+			menuActive = true;
+		}
+	});
+	
+	close.addEventListener("click", function(event){
+		event.preventDefault( );
+		if(menuActive == true){
+			menu.classList.remove("active");
+			menuActive = false;
+		}
 	})
 </script>
 </html>

@@ -29,6 +29,7 @@
 		<div class="content">
 				<a id="menu-toggle" class="icon-menu" href="#"></a>
 				<nav id="mobile-navigation">
+					<a id="menu-close" class="icon-cancel" href="#"></a>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary') ); ?>
 				</nav>
 				<a id="main-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="Ir al inicio">
@@ -42,4 +43,4 @@
 		</div>
 	</header>
 </section>
-<div class="page">
+<div class="main-page-container">
