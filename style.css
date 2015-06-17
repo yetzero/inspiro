@@ -1483,6 +1483,7 @@ p.small-icon {
 	}
 	.fullbleed {
 		padding: 1em;
+		margin-top:0;
 	}
 	.taller {
 		padding-top:5em;
