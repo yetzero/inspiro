@@ -431,6 +431,16 @@ a:active {
 	color: #00AD7B;
 }
 
+a.cta {
+	margin-top:0.5em;
+	display:inline-block;
+	background: #00AD7B;
+	color: white;
+	text-decoration: none;
+	padding: 0.3em 0.6em;
+	border-radius: 0.5em;}
+}
+
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
@@ -442,6 +452,8 @@ ul.menu {
 	text-align: center;
 	padding-top:0px;
 }
+
+
 
 ul.menu li {
 	display: inline-block;
@@ -1018,6 +1030,10 @@ section p, section h1, section h2, section h3, section h4, section h5, section h
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+section ul.menu {
+	width:100%;
 }
 
 section.short-bar {
