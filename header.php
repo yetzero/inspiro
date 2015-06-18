@@ -1,14 +1,23 @@
 <?php
-/**
- * The header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="content">
- *
- * @package inspiro
- */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+<?php if(is_front_page()){ ?>
+
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='92459690-0',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+
+<?php } ?>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -21,6 +30,7 @@
 	<script>try{Typekit.load();}catch(e){}</script>
 <!-- End Typekit -->
 </head>
+
 
 <body <?php body_class(); ?>>
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'inspiro' ); ?></a>
