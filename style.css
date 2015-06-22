@@ -61,7 +61,7 @@ html {
 }
 
 body {
-	background: #f7f7f7; /* Fallback for when there is no custom background color defined. */
+	background: white; /* Fallback for when there is no custom background color defined. */
 }
 
 article,
@@ -1059,7 +1059,8 @@ section ul, section ol {
 }
 
 .wide p {
-	max-width: 90%;
+	width:90%;
+	max-width:50em;
 }
 
 .breadcrumb {
@@ -1168,6 +1169,10 @@ section#hero-ipad {
 	background-size: cover;
 	background-position: 50% 50%;
 }
+
+#trabajo-integrado {
+	margin-top:50px;
+	}
 
 /* Responsive Promo Section */
 
