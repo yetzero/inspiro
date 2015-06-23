@@ -1343,11 +1343,11 @@ p:empty {
 
 @font-face {
   font-family: "inspiro-icons";
-  src:url("fonts/inspiro-icons.eot");
+  src:url("fonts/inspiro-icons.eot?v=1");
   src:url("fonts/inspiro-icons.eot?#iefix") format("embedded-opentype"),
-    url("fonts/inspiro-icons.woff") format("woff"),
-    url("fonts/inspiro-icons.ttf") format("truetype"),
-    url("fonts/inspiro-icons.svg#inspiro-icons") format("svg");
+    url("fonts/inspiro-icons.woff?v=1") format("woff"),
+    url("fonts/inspiro-icons.ttf?v=1") format("truetype"),
+    url("fonts/inspiro-icons.svg#inspiro-icons?v=1") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -1444,6 +1444,15 @@ p:empty {
 }
 .icon-cancel:before {
   content: "o";
+}
+.icon-speed-optimizations:before {
+  content: "q";
+}
+.icon-backups:before {
+  content: "t";
+}
+.icon-reports:before {
+  content: "u";
 }
 
 
